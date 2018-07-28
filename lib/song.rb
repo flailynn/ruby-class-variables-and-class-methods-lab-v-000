@@ -4,6 +4,9 @@ class Song
   #@@count will hold the number of songs created
   @@count = 0
 
+  #@@genres will hold the unique genres of all created songs
+  @@genres = []
+
   def initialize(name, artist, genre)
     self.name = name
     self.artist = artist
