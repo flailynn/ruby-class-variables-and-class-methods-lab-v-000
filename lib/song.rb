@@ -7,12 +7,16 @@ class Song
   #@@genres will hold the unique genres of all created songs
   @@genres = []
 
+  #@@artists is an array of unique artists for all created songs
+  @@artists = []
+
   def initialize(name, artist, genre)
     self.name = name
     self.artist = artist
     self.genre = genre
 
     @@count += 1
+    @@artists << genre unless @@artists.include?(artist)
     @@genres << genre unless @@genres.include?(genre)
 
   end
